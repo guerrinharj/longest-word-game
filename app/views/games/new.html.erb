@@ -1,0 +1,13 @@
+<h3> Here's your grid </h3>
+<ul>
+  <% @letters.each do |letter| %>
+  <li> <%= letter %> </li>
+  <% end %>
+</uL>
+
+<h3> What's the word you want to find? </h3>
+<form action="/score" method="post">
+  <input type="text" name="word">
+  <input type="submit">
+  <%= hidden_field_tag :letters, @letters %>
+</form>

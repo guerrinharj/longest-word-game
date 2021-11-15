@@ -2,7 +2,6 @@ require 'open-uri'
 require 'json'
 
 class GamesController < ApplicationController
-  skip_before_action :verify_authenticity_token
 
   def generate_letter
     new_character = ('a'...'z').to_a.sample
